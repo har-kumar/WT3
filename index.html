@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bio Data</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./bootstrap-4.0.0-dist (1)/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #FF6692;
+    }
+    #left-container {
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .big-text {
+      font-size: 24px;
+    }
+    #details-container {
+      background: linear-gradient(to bottom right, #00BCF2, #00B294);
+      padding: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      border-radius: 0 10px 10px 0;
+    }
+    #details-container > div {
+      text-align: center;
+      border: 2px solid black;
+      padding: 10px;
+      margin-bottom: 20px;
+      background-color: white;
+      border-radius: 10px;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-lg-3 mb-4" id="left-container">
+      <img src="hari.png" alt="Profile Image" class="profile-img">
+      <ul class="mb-4">
+        <li><a href="#" onclick="showDetails('contact')">Contact</a></li>
+        <li><a href="#" onclick="showDetails('edu')">Educational Qualification</a></li>
+        <li><a href="#" onclick="showDetails('papers')">Papers Presented</a></li>
+        <li><a href="#" onclick="showDetails('skills')">Skills</a></li>
+        <li><a href="#" onclick="showDetails('strength')">Strength & Weakness</a></li>
+      </ul>
+      <p class="big-text mb-4"><b class="big-text">PERSONAL DETAILS LINK:</b> <a href="html.html" class="big-text">Click Here</a></p>
+    </div>
+    <div class="col-lg-9">
+      <div id="details-container" class="mb-4">
+        <div id="contact">
+          <h1 class="big-text"><b>CONTACT</b></h1>
+          <p class="big-text"><b>NAME:</b> Harini K</p>
+          <p class="big-text"><b>ADDRESS:</b> MGR Nagar, Palayajeyankondam, KR Puram(Tk), Karur(Dt).</p>
+          <p class="big-text"><b>EMAIL ID:</b> harinik.22it@kongu.edu</p>
+          <p class="big-text"><b>PHONE NO:</b> 9080850274</p>
+        </div>
+        <div id="edu" style="display: none;">
+          <h1 class="big-text"><b>EDUCATIONAL QUALIFICATION</b></h1>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>S.NO</th>
+                <th>NAME OF THE SCHOOL/COLLEGE</th>
+                <th>ACADEMIC</th>
+                <th>PERCENTAGE/CGPA</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Karur Saraswathi Vidhyalaya</td>
+                <td>10th</td>
+                <td>93%</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Karur Saraswathi Vidhyalaya</td>
+                <td>12th</td>
+                <td>91%</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Kongu Engineering College</td>
+                <td>B.Tech IT</td>
+                <td>8.45 CGPA</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="papers" style="display: none;">
+          <h1 class="big-text"><b>PAPERS PRESENTED</b></h1>
+          <ol class="big-text">
+            <li><b>CHATBOT</b>: Kongu Engineering College</li>
+            <li><b>5G TECHNOLOGY</b>: Kongu Engineering College</li>
+            <li><b>VIRTUAL REALITY</b>: KSR College of Engineering</li>
+            <li><b>BRAIN FINGERPRINTING</b>: Coimbatore Institute of Technology</li>
+          </ol>
+        </div>
+        <div id="skills" style="display: none;">
+          <h1 class="big-text"><b>SKILLS</b></h1>
+          <ol class="big-text">
+            <li><b>PROGRAMMING LANGUAGES</b>: C, Java, & Python</li>
+            <li><b>SOFT SKILLS</b>: Communication, Problem Solving</li>
+            <li><b>TECHNICAL SKILLS</b>: Web Development, DBMS</li>
+          </ol>
+        </div>
+        <div id="strength" style="display: none;">
+          <h1 class="big-text"><b>STRENGTH & WEAKNESS</b></h1>
+          <p class="big-text"><b>STRENGTH:</b> My strength is I am self-motivated person and I am very optimistic in every situation.</p>
+          <p class="big-text"><b>WEAKNESS:</b> My weakness is I just can't keep anything half done. If some work is pending, I just go on working on it and that sometimes affects my other work routine.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+  function showDetails(section) {
+    var sections = document.querySelectorAll('#details-container > div');
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].style.display = 'none';
+    }
+    document.getElementById(section).style.display = 'block';
+  }
+  document.getElementById('contact').style.display = 'block';
+</script>
+</body>
+</html>
